@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header-font;
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.highlight {
+    color: $highlight;
+    border-color: $highlight;
+}
+
+.app {
+    background-color: $bg-color;
+    height: 100vh;
+    font-family: $body-font;
+}
+
+@mixin button {
+    outline:none;
+    border-radius:5px;
+    padding:.25rem .5rem;
+    transition: .2s all;
+}
+
+.button--outline {
+    @include button;
+    $color: $black;
+    background-color: none;
+    &.highlight {
+        $color:$highlight;
+    }
+    &:hover {
+        background-color: $color;
+        // color: choose-contrast-color($black);
+        color:white;
+        cursor: pointer;
+    }
+    border:2px solid $color;
+}
+
+.page {
+    padding-top: 4rem;
+    height:100%;
+}
