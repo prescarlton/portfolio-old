@@ -7,7 +7,9 @@ a {
     color: unset;
     text-decoration: none;
 }
-
+html, body{
+    background-color: $bg-color;
+}
 
 h1,
 h2,
@@ -30,7 +32,7 @@ h6 {
 
 .app {
     background-color: $bg-color;
-    height: 100vh;
+    height: 100%;
     font-family: $body-font;
 }
 

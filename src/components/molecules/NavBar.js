@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 
 const NavBar = () => {
+
     return (
         <nav className='navbar'>
             <ul className='navbar__linkGroup'>
@@ -15,6 +17,7 @@ const NavBar = () => {
                 <li className='linkGroup__link button--outline highlight'>Resume</li>
             </ul>
         </nav>
+
     );
 };
 
