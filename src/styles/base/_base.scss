@@ -9,6 +9,7 @@ a {
 }
 html, body{
     background-color: $bg-color;
+    color: $body-color;
 }
 
 h1,
@@ -39,8 +40,11 @@ h6 {
 @mixin button {
     outline:none;
     border-radius:5px;
-    padding:.25rem .5rem;
+    padding:.5rem 1.25rem;
     transition: .2s all;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .button--outline {
@@ -54,12 +58,22 @@ h6 {
         background-color: $color;
         // color: choose-contrast-color($black);
         color:white;
-        cursor: pointer;
     }
     border:2px solid $color;
+}
+.button--solid {
+    @include button;
+    color: white;
+    border:none;
+    background-color: $highlight;
+    &:hover{
+        opacity:.8;
+    }
 }
 
 .page {
     padding-top: 4rem;
     height:100%;
+    margin: 0 auto;
+    width:95%;
 }
