@@ -10,6 +10,10 @@ a {
 html, body{
     background-color: $bg-color;
     color: $body-color;
+    height:100%;
+}
+#root {
+    height: 100%;
 }
 
 h1,
@@ -37,7 +41,7 @@ h6 {
     font-family: $body-font;
 }
 
-@mixin button {
+.button {
     outline:none;
     border-radius:5px;
     padding:.5rem 1.25rem;
@@ -48,7 +52,7 @@ h6 {
 }
 
 .button--outline {
-    @include button;
+    @extend .button;
     $color: $black;
     background-color: none;
     &.highlight {
@@ -62,7 +66,7 @@ h6 {
     border:2px solid $color;
 }
 .button--solid {
-    @include button;
+    @extend .button;
     color: white;
     border:none;
     background-color: $highlight;

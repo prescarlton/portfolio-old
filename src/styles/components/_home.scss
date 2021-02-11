@@ -1,21 +1,71 @@
 .home {
+    @extend .page;
     text-align: center;
-    padding-top: 12rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width:70%;
-    *{
-        margin: .25rem 0;
+    padding-top: 6rem;
+    width: 70%;
+
+    .lander {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .words {
+            max-width: 90%;
+            *:not(h1) {
+                margin: .25rem 0;
+            }
+
+            h1 {
+                font-size: 6.5rem;
+                font-weight: normal;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+            }
+
+            .button--solid {
+                font-size: 1.2rem;
+                display: inline-block;
+            }
+        }
+
+        .mePic {
+            width: 65%;
+            border-radius: 100%;
+            margin-bottom: -1rem;
+        }
     }
-    h1 {
-        font-size: 6.5rem;
-        font-weight: normal;
-    }
-    h3 {
-        font-size:2.5rem;
-    }
-    .button--solid {
-        font-size:1.2rem;
+
+
+}
+
+@media screen and (min-width: 1224px) {
+    .home {
+        padding:0;
+        display:flex;
+        width:90%;
+        // align-items: flex-start;
+        justify-content: flex-start;
+        .lander {
+            flex-direction: row;
+            .mePic {
+                width:20rem;
+                margin: 0;
+            }
+        }
+        .words {
+            border-left: 1px solid $black;
+            padding-left:2.5rem;
+            margin-left:2.5rem;
+            text-align:left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            * {
+                max-width:70%;
+            }
+        }
+        
     }
 }

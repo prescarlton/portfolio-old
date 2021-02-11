@@ -1,0 +1,13 @@
+.projectCard {
+    background-color: white;
+    min-height:25rem;
+    // height:100%;
+    flex: 1;
+    box-shadow: $box-shadow;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding:.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
