@@ -1,0 +1,53 @@
+.lander {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+
+    * {
+        margin: .5rem 0;
+    }
+
+    .site-header {
+        font-size: 2.25rem;
+    }
+
+    .site-subheader {
+        font-weight: normal;
+        font-family: $body-font;
+        color: #63646D;
+    }
+    *:last-child {
+        margin-bottom:1rem;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    .lander {
+        align-items: flex-start;
+        text-align: left;
+
+        * {
+            margin: 1rem 0;
+        }
+
+        .site-header {
+            font-size: 4rem;
+        }
+
+        .site-subheader {
+            font-size: 2rem;
+            font-weight: 300;
+            width: 45%;
+        }
+
+        .button {
+            font-size: 1.5rem;
+            padding: .75rem 1.5rem;
+        }
+
+        *:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+}
