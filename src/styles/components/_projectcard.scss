@@ -1,13 +1,47 @@
 .projectCard {
-    background-color: white;
-    min-height:25rem;
-    // height:100%;
-    flex: 1;
-    box-shadow: $box-shadow;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    padding:.25rem;
+    background: none;
+    height: 15rem;
+    margin-bottom: 4rem;
+    // padding: .25rem;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        * {
+            margin: .25rem 0;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            li {
+                margin: 0 .25rem;
+            }
+        }
+        p {
+            background-color: $black;
+            padding: 1rem 2rem;
+            width: 60%;
+            color: white;
+        }
+    }
+    &:nth-of-type(odd){
+        .projectCard__content{
+            text-align: right;
+            align-items: flex-end;
+        }
+    }
+    &:nth-of-type(even){
+        flex-direction: row-reverse;
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &__thumb {
+        width: 40%;
+    }
 }
