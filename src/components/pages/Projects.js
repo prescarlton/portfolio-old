@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import ProjectCard from '../atoms/ProjectCard';
 
 const projectList = [
@@ -12,7 +13,8 @@ const projectList = [
         ],
         links: {
             github: 'prescarlton/tido'
-        }
+        },
+        featured: true
     },
     {
         name: 'Box-Set',
@@ -54,13 +56,15 @@ const projectList = [
 const Projects = () => {
     return (
         <div className='projects'>
+        <h1 className='page-title'>projects</h1>
             <div className='projectList'>
                 {
                     projectList.map(project => (
-                        <ProjectCard {...project} key={project.id}/>
+                        <ProjectCard {...project} key={project.id} />
                     ))
                 }
             </div>
+            <NavLink className='button--text highlight' to='/'>Go Home</NavLink>
         </div>
     )
 }

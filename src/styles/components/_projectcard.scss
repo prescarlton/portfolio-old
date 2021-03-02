@@ -1,47 +1,51 @@
-.projectCard {
-    background: none;
-    height: 15rem;
-    margin-bottom: 4rem;
-    // padding: .25rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__content {
-        display: flex;
-        flex-direction: column;
-        * {
-            margin: .25rem 0;
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            li {
-                margin: 0 .25rem;
-            }
-        }
-        p {
-            background-color: $black;
-            padding: 1rem 2rem;
-            width: 60%;
-            color: white;
-        }
-    }
-    &:nth-of-type(odd){
-        .projectCard__content{
-            text-align: right;
-            align-items: flex-end;
-        }
-    }
-    &:nth-of-type(even){
-        flex-direction: row-reverse;
-    }
+// .projectCard {
+//     background: none;
+//     height: 15rem;
+//     margin-bottom: 4rem;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     &__content {
+//         display: flex;
+//         flex-direction: column;
+//         * {
+//             margin: .25rem 0;
+//         }
+//         ul {
+//             list-style: none;
+//             display: flex;
+//             li {
+//                 margin: 0 .25rem;
+//             }
+//         }
+//         p {
+//             background-color: $black;
+//             padding: 1rem 2rem;
+//             width: 60%;
+//             color: white;
+//         }
+//     }
+//     &:nth-of-type(odd){
+//         .projectCard__content{
+//             text-align: right;
+//             align-items: flex-end;
+//         }
+//     }
+//     &:nth-of-type(even){
+//         flex-direction: row-reverse;
+//     }
 
-    &__icon {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
+//     &__icon {
+//         width: 1.5rem;
+//         height: 1.5rem;
+//     }
 
-    &__thumb {
-        width: 40%;
-    }
-}
+//     &__thumb {
+//         width: 40%;
+//     }
+// }
+
+
+// @media screen and (min-width: 1224px) {
+
+// }

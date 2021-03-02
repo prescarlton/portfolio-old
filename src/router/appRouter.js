@@ -4,7 +4,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    NavLink
 } from "react-router-dom";
 import MobileNavBar from '../components/molecules/MobileNavBar';
 import NavBar from '../components/molecules/NavBar';

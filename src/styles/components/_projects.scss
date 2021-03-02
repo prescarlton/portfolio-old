@@ -1,12 +1,132 @@
 .projects {
     @extend .page;
-    padding-top:6rem;
+    height: unset;
+    padding-bottom: 1.5rem;
+    text-align: center;
 }
 
-.projectList {
-    height:calc(90vh);
-    // display: flex;
+.projectCard {
+    background: none;
+    margin: 1.5rem 0;
+    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        color: white;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        * {
+            margin: .2rem 0;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin: 0 .25rem;
+            }
+        }
+
+        .projectCard__featuredBanner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            // background:black;
+            border-top-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: .25rem .5rem;
+
+        }
+    }
+
+    &__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &__thumb {
+        width: 100%;
+    }
+
+    &__thumbWrapper {
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba($color: $black, $alpha: .6);
+            transition: background .3s linear;
+            border-radius: 7px;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        .projectCard__content {
+            text-align: right;
+            align-items: flex-end;
+
+            li:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &:nth-of-type(even) {
+        text-align: left;
+
+        li:first-of-type {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    .page-title {
+        margin: 1rem 1.5rem 0rem;
+    }
+
+    .projectList {
+        display: flex;
+        // justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .projectCard {
+        width: 35rem;
+        margin: 1rem;
+
+        &__content {
+            justify-content: flex-end;
+            text-align: left;
+            align-items: flex-start;
+        }
+
+        &:nth-of-type(odd) {
+            .projectCard__content {
+                text-align: left;
+                align-items: flex-start;
+
+                li:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
 }

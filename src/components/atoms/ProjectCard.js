@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const ProjectCard = (props) => {
     return (
         <div className='projectCard'>
-            <img className='projectCard__thumb' src={require(`./../../img/${props.id}_screenshot.png`).default} />
+            <div className='projectCard__thumbWrapper'>
+                <img className='projectCard__thumb' src={require(`./../../img/${props.id}_screenshot.png`).default} />
+            </div>
             <div className='projectCard__content'>
                 <h1>{props.name}</h1>
-                <p>{props.description}</p>
                 <ul>
                     {props.tags.map(tag => {
                         return (
@@ -21,6 +22,9 @@ const ProjectCard = (props) => {
                 <a target='_blank' href={`https://www.github.com/${props.links.github}`}>
                     <FiGithub className='projectCard__icon' />
                 </a>
+                {props.featured && (
+                    <div className='projectCard__featuredBanner'>Featured</div>
+                )}
             </div>
         </div>
     )
