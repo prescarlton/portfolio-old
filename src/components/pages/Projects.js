@@ -64,7 +64,6 @@ const Projects = () => {
                     ))
                 }
             </div>
-            <NavLink className='button--text highlight' to='/'>Go Home</NavLink>
         </div>
     )
 }
